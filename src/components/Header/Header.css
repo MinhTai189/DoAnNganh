@@ -1,0 +1,361 @@
+/* ==========style header========= */
+#header-container {
+  width: 100%;
+  max-width: 1800px;
+  min-height: calc(100vh - 55.2px);
+  background: url(../../images/header.jpg) no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* ============style bảng nội dung Header================ */
+#header-container .header-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 95%;
+  max-width: 60rem;
+  height: 35rem;
+  background: #92dce585;
+  box-shadow: 0 0 2rem var(--thiColor);
+  padding: 0 2rem;
+  margin: auto;
+}
+
+#header-container .header-content h2 {
+  margin-bottom: 10rem;
+  margin-top: 4rem;
+  font-size: 2.3rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  position: relative;
+  text-align: center;
+}
+
+#header-container .title-header::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -16px;
+  transform: translateX(-50%);
+  width: 30%;
+  height: 0.2rem;
+  opacity: 0.7;
+  background-color: var(--thiColor);
+}
+
+#header-container .form-search h3 {
+  font-size: 2.2rem;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 0.7rem;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+/* ============style cho element input Header=============== */
+#header-container .form-search .input {
+  display: flex;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+#header-container .form-search input {
+  width: 30rem;
+  height: 3.4rem;
+  outline: none;
+  border: 1px solid var(--priColor);
+  border-radius: 0 1rem 1rem 0;
+  padding-left: 1rem;
+}
+
+#header-container .form-search input::placeholder {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: var(--priColor);
+  opacity: 0.6;
+}
+
+#header-container .form-search .label {
+  width: 3rem;
+  height: 3.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-radius: 1rem 0 0 1rem;
+  margin-right: 0rem;
+  border: 1px solid var(--priColor);
+  background-color: var(--priColor);
+}
+
+#header-container .form-search .label .icon {
+  width: 60%;
+  height: 60%;
+  fill: #fff;
+}
+
+/* ============style cho Suggestions=============== */
+#header-container .suggestions {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 120%;
+  padding: 1.5rem 0 1.2rem;
+  background: #fff;
+  border-radius: 1rem;
+  border: 2px solid var(--priColor);
+  z-index: 189;
+  opacity: 1;
+}
+
+#header-container .suggestions span {
+  font-size: 2rem;
+  padding: 0;
+  transform: rotate(180deg);
+  text-align: right;
+  cursor: pointer;
+  padding-right: 0.9rem;
+  transition: 0.3s;
+  display: none;
+}
+
+#header-container .suggestions span:hover {
+  color: var(--priColor);
+  transition: 0.3s;
+}
+
+#header-container .suggestions::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 0.7rem solid transparent;
+  border-right: 0.7rem solid transparent;
+  border-bottom: 0.7rem solid var(--priColor);
+}
+
+#header-container .suggestions h4 {
+  font-size: 1.7rem;
+  font-weight: 400;
+  margin-left: 1.3rem;
+  margin-bottom: 0.8rem;
+}
+
+#header-container .suggestions .suggestions-wrapper {
+  display: grid;
+  grid-template-columns: 19rem 19rem 19rem;
+  grid-row-gap: 0.5rem;
+}
+
+#header-container .suggestion {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 6rem;
+  cursor: pointer;
+  padding: 0.7rem 1rem;
+  transition: 0.3s;
+}
+
+#header-container .suggestions .suggestion:hover {
+  background: #92dce538;
+  transition: 0.3s;
+}
+
+#header-container .suggestions .suggestion img {
+  height: 5rem;
+  width: 5rem;
+  margin-right: 1rem;
+}
+
+#header-container .suggestions .suggestion h5 {
+  font-size: 1.6rem;
+  margin-bottom: 0.4rem;
+}
+
+#header-container .suggestions .suggestion p {
+  font-size: 1.2rem;
+}
+
+/* ============style Button Header============= */
+#header-container .form-search button {
+  padding: 0.6rem 2.6rem;
+  background: transparent;
+  cursor: pointer;
+  border: 2px solid var(--priColor);
+  font-weight: 500;
+  transition: 0.4s ease-out;
+  opacity: 0.8;
+
+  margin-left: 50%;
+  transform: translateX(-50%);
+  border-radius: 1rem;
+}
+
+#header-container .form-search button:hover {
+  background: var(--priColor);
+  border-color: var(--priColor);
+  transition: 0.4s ease-out;
+}
+
+#header-container .form-search button a {
+  color: var(--priColor);
+}
+
+#header-container .form-search button:hover a {
+  color: #fff;
+  transition: 0.4s ease-out;
+}
+
+/* ==========media query============= */
+@media (max-width: 960px) {
+  .header-content {
+    width: 98%;
+    max-width: 55rem;
+    height: 30rem;
+  }
+
+  .header-content h2 {
+    font-size: 2rem;
+    margin-bottom: 6rem;
+  }
+
+  #header-container .form-search h3 {
+    font-size: 1.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    height: 35rem;
+    max-width: 45rem;
+  }
+
+  .header-content h2 {
+    font-size: 1.6rem;
+    margin-bottom: 9rem;
+  }
+
+  #header-container .form-search h3 {
+    font-size: 1.9rem;
+  }
+
+  /* =========style Suggestion========= */
+  #header-container .suggestions {
+    position: fixed;
+    left: 50%;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+    border: none;
+    padding: 1.5rem 2rem;
+    overflow: scroll;
+  }
+
+  #header-container .suggestions span {
+    display: block;
+  }
+
+  #header-container .suggestions::before {
+    display: none;
+  }
+
+  #header-container .suggestions .suggestions-wrapper {
+    grid-template-columns: 1fr;
+    grid-row-gap: 1rem;
+  }
+
+  #header-container .suggestions .suggestion {
+    height: 6.5rem;
+    padding: 0rem 1rem;
+  }
+
+  #header-container .suggestions .suggestion img {
+    height: 6rem;
+    width: 6rem;
+  }
+}
+
+@media (max-width: 500px) {
+  #header-container .header-content {
+    height: 30rem;
+    max-width: calc(100% - 3rem);
+    padding: 0 0.4rem;
+  }
+
+  #header-container .header-content h2 {
+    font-size: 1.2rem;
+    margin-bottom: 7rem;
+  }
+
+  #header-container .form-search h3 {
+    font-size: 1.3rem;
+  }
+
+  #header-container .form-search input {
+    width: 20rem;
+  }
+
+  #header-container .form-search input::placeholder {
+    font-size: 1.1rem;
+  }
+
+  #header-container .form-search button {
+    font-size: 1.2rem;
+    padding: 0.5rem 2rem;
+  }
+
+  #header-container .suggestions {
+    padding: 0.5rem 0.3rem;
+  }
+}
+
+@media (max-width: 300px) {
+  #header-container .header-content {
+    height: 25rem;
+    max-width: calc(100% - 1rem);
+    padding: 0rem 0.3rem;
+  }
+
+  #header-container .header-content h2 {
+    font-size: 1rem;
+    margin-bottom: 4rem;
+  }
+
+  #header-container .header-content h2::after {
+    height: 0.8px;
+  }
+
+  #header-container .form-search h3 {
+    font-size: 1rem;
+  }
+
+  #header-container .form-search input {
+    width: 17rem;
+    height: 2.8rem;
+  }
+
+  #header-container .form-search .label {
+    height: 2.8rem;
+  }
+
+  #header-container .form-search input::placeholder {
+    font-size: 1rem;
+  }
+
+  #header-container .form-search button {
+    font-size: 1rem;
+    padding: 0.5rem 1.7rem;
+  }
+}

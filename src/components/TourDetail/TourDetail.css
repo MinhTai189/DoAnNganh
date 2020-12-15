@@ -1,0 +1,256 @@
+#tour-detail .detail-wrapper {
+  display: flex;
+  width: 100%;
+  min-height: 37rem;
+}
+
+#tour-detail .detail-wrapper .img {
+  flex-basis: 65%;
+  width: 100%;
+}
+
+#tour-detail .detail-wrapper .detail {
+  flex-basis: 35%;
+  background: #f1f1f1;
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+#tour-detail .detail-wrapper .detail .title-tour {
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #777;
+  font-size: 1.7rem;
+  padding: 0.5rem 0 1.5rem;
+}
+
+#tour-detail .detail-wrapper .detail .infos {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #777;
+}
+
+#tour-detail .detail-wrapper .detail .infos .info {
+  display: flex;
+  padding: 0.5rem 0;
+}
+
+#tour-detail .detail-wrapper .detail .infos .info h4 {
+  display: inline-block;
+  width: 11rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+#tour-detail .detail-wrapper .detail .infos .info p {
+  font-size: 1.4rem;
+}
+
+#tour-detail .detail-wrapper .detail .about {
+  padding: 1.5rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+#tour-detail .detail-wrapper .detail .about .col-left {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+#tour-detail .detail-wrapper .detail .about .col-left .price {
+  margin-bottom: 0.4rem;
+}
+
+#tour-detail .detail-wrapper .detail .about strong {
+  color: red;
+  font-size: 1.7rem;
+}
+
+#tour-detail .detail-wrapper .detail .about .col-right .btn {
+  width: 11rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  transition: all 0.4s;
+}
+
+#tour-detail .detail-wrapper .detail .about .col-right .btn .icon-container {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.7rem;
+}
+
+#tour-detail
+  .detail-wrapper
+  .detail
+  .about
+  .col-right
+  .btn
+  .icon-container
+  .icon {
+  fill: #fff;
+}
+
+#tour-detail
+  .detail-wrapper
+  .detail
+  .about
+  .col-right
+  .btn:hover
+  .icon-container
+  .icon {
+  fill: var(--priColor);
+  transition: all 0.4s;
+}
+
+#tour-detail .countdown-time {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0 2rem;
+}
+
+#tour-detail .countdown-time h4 {
+  font-size: 1.5rem;
+  margin-right: 2.5rem;
+}
+
+#tour-detail .countdown-time .time-container {
+  display: flex;
+  align-items: center;
+}
+
+#tour-detail .countdown-time .time {
+  margin-right: 1.8rem;
+  font-size: 2rem;
+  width: 3.8rem;
+  height: 3.8rem;
+  border-radius: 5px;
+  border: 1px solid var(--thiColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: var(--secColor);
+  pointer-events: none;
+}
+
+#tour-detail .countdown-time .time::after {
+  position: absolute;
+  width: 100%;
+  font-size: 1.2rem;
+  text-align: center;
+  height: 2rem;
+  left: 0;
+  bottom: -2.4rem;
+  opacity: 0.8;
+}
+
+#tour-detail .countdown-time .time.day::after {
+  content: "Ngày";
+}
+
+#tour-detail .countdown-time .time.hour::after {
+  content: "giờ";
+}
+
+#tour-detail .countdown-time .time.minute::after {
+  content: "phút";
+}
+
+#tour-detail .countdown-time .time.second::after {
+  content: "giây";
+}
+
+#tour-detail .countdown-time .time.second {
+  background: #ec2020;
+}
+
+/* ============media query=============== */
+@media (max-width: 1024px) {
+  #tour-detail .detail-wrapper {
+    flex-direction: column;
+  }
+
+  #tour-detail .detail-wrapper .img {
+    flex-basis: 100%;
+  }
+
+  #tour-detail .detail-wrapper .detail {
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  #tour-detail .countdown-time h4 {
+    font-size: 1.3rem;
+    margin-right: 1.2rem;
+  }
+
+  #tour-detail .countdown-time .time {
+    margin-right: 1.5rem;
+    font-size: 1.4rem;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  #tour-detail .countdown-time .time::after {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 375px) {
+  #tour-detail .detail-wrapper .detail .title-tour {
+    font-size: 1.3rem;
+    padding: 0.4rem 0 1rem;
+  }
+
+  #tour-detail .detail-wrapper .detail .infos {
+    padding: 0.8rem 0;
+  }
+
+  #tour-detail .detail-wrapper .detail .infos .info {
+    padding: 0.3rem 0;
+  }
+
+  #tour-detail .detail-wrapper .detail .infos .info h4 {
+    font-size: 1.3rem;
+  }
+
+  #tour-detail .detail-wrapper .detail .infos .info p {
+    font-size: 1.3rem;
+  }
+
+  #tour-detail .detail-wrapper .detail .about {
+    padding: 1rem 0;
+  }
+
+  #tour-detail .detail-wrapper .detail .about .col-left {
+    font-size: 1.2rem;
+  }
+
+  #tour-detail .detail-wrapper .detail .about strong {
+    font-size: 1.4rem;
+  }
+
+  #tour-detail .detail-wrapper .detail .about .col-right .btn {
+    width: 8rem;
+    height: 3.2rem;
+    font-size: 1rem;
+  }
+
+  #tour-detail .detail-wrapper .detail .about .col-right .btn .icon-container {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+
+  #tour-detail .countdown-time {
+    justify-content: center;
+  }
+
+  #tour-detail .countdown-time h4 {
+    display: none;
+  }
+}

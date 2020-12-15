@@ -1,0 +1,110 @@
+h1.wrong {
+  font-size: 3rem;
+  width: 100%;
+  text-align: center;
+  margin: 8rem 0;
+}
+
+#all-tour .alltour-wrapper {
+  width: 100%;
+  padding: 1.5rem 0;
+}
+
+#all-tour h1 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  opacity: 0.8;
+  text-shadow: 1px 1px 1px var(--thiColor);
+  margin-bottom: 2rem;
+  display: inline-block;
+  padding: 0.7rem 0.5rem;
+  border-radius: 2.5rem;
+  border-bottom: 5px solid var(--priColor);
+}
+
+#all-tour .btn-container {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+#all-tour .btn-container .btn {
+  width: 2.8rem;
+  height: 2.8rem;
+  background: transparent;
+  color: var(--priColor);
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  transition: 0.4s;
+}
+
+#all-tour .btn-container .btn:hover,
+#all-tour .btn-container .btn.active {
+  background: var(--priColor);
+  color: #fff;
+  transition: 0.4s;
+}
+
+#all-tour .btn-container .btn:last-child,
+#all-tour .btn-container .btn:first-child {
+  font-size: 1.7rem;
+  line-height: 2.2rem;
+}
+
+#all-tour .btn-container .btn:not(:last-child) {
+  margin-right: 1.8rem;
+}
+
+/* =============media query============ */
+@media (max-width: 768px) {
+  #all-tour h1 {
+    font-size: 1.8rem;
+    border-bottom-width: 3px;
+  }
+
+  #all-tour .btn-container {
+    margin-top: 0.5rem;
+  }
+
+  #all-tour .btn-container .btn {
+    width: 2.3rem;
+    height: 2.3rem;
+    font-size: 1.1rem;
+  }
+
+  #all-tour .btn-container .btn:last-child,
+  #all-tour .btn-container .btn:first-child {
+    font-size: 1.4rem;
+    line-height: 1.5rem;
+  }
+
+  #all-tour .btn-container .btn:not(:last-child) {
+    margin-right: 0.8rem;
+  }
+}
+
+@media (max-width: 425px) {
+  #all-tour h1 {
+    font-size: 1.4rem;
+  }
+
+  #all-tour .btn-container {
+    margin-top: 0rem;
+  }
+
+  #all-tour .btn-container .btn {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+}
+
+/* ===========media query============ */
+@media (max-width: 425px) {
+  h1.wrong {
+    font-size: 2rem;
+  }
+}

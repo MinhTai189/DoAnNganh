@@ -1,0 +1,36 @@
+footer {
+  background: var(--thiColor);
+  width: 100%;
+}
+
+footer .container {
+  padding: 2rem;
+}
+
+footer .container p {
+  font-weight: 400;
+  color: #fff;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+/* ===========media query============== */
+@media (max-width: 768px) {
+  footer .container {
+    padding: 0.9rem;
+  }
+
+  footer .container p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 360px) {
+  footer .container {
+    padding: 0.5rem;
+  }
+
+  footer .container p {
+    font-size: 0.9rem;
+  }
+}

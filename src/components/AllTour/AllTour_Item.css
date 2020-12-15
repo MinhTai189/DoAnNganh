@@ -1,0 +1,221 @@
+#all-tour .row {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 35rem 1fr 35rem;
+  border-bottom: 1px solid var(--forColor);
+  padding: 3rem 0;
+}
+
+#all-tour .col-1 {
+  height: 25rem;
+  width: 100%;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+#all-tour .col-1 img {
+  filter: brightness(90%);
+  transition: 0.5s;
+}
+
+#all-tour .col-1:hover img {
+  transform: scale(1.1);
+  filter: brightness(1);
+  transition: 0.5s;
+}
+
+#all-tour .col-2 {
+  padding: 1.5rem 3rem;
+}
+
+#all-tour .col-2 .title-tour {
+  font-size: 2rem;
+  display: block;
+  padding: 0rem 0 0.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+#all-tour .col-2 .title-tour a {
+  color: var(--priColor);
+  opacity: 0.85;
+  transition: opacity 0.3s;
+}
+
+#all-tour .col-2 .title-tour a:hover {
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+#all-tour .col-2 .place {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+#all-tour .col-2 .place strong {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-right: 0.8rem;
+  opacity: 0.9;
+}
+
+#all-tour .col-2 .place p {
+  font-size: 1.5rem;
+  opacity: 0.9;
+}
+
+#all-tour .col-2 .info p {
+  opacity: 0.9;
+  font-size: 1.4rem;
+  line-height: 3rem;
+  font-weight: 400;
+}
+
+#all-tour .col-3 {
+  padding: 1.5rem 0.5rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#all-tour .col-3 .price {
+  padding: 1rem 2rem;
+  background-color: var(--priColor);
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  transition: 0.3s;
+}
+
+#all-tour .col-3 .price:hover {
+  opacity: 1;
+  transition: 0.3s;
+}
+
+#all-tour .col-3 .price a {
+  line-height: 3rem;
+  font-size: 1.35rem;
+  color: #fff;
+}
+
+#all-tour .col-3 .price .money {
+  float: right;
+  margin-left: 1rem;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+#all-tour .col-3 .time .date {
+  padding: 0.9rem 1.7rem;
+  margin-bottom: 1.3rem;
+  border: 1px solid gray;
+  font-size: 1.5rem;
+  opacity: 0.9;
+}
+
+#all-tour .col-3 .time .date .icon-container {
+  width: 1.5rem;
+  height: 1.5rem;
+  opacity: 0.8;
+  padding-top: 0.1rem;
+  float: left;
+  margin-right: 0.5rem;
+}
+
+/* ==========media query========== */
+@media (max-width: 1024px) {
+  #all-tour .row {
+    grid-template-columns: 100%;
+    padding-bottom: 2.5rem;
+  }
+
+  #all-tour .col-1 {
+    height: 30rem;
+  }
+
+  #all-tour .col-3 {
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  #all-tour .col-3 .time .date {
+    float: left;
+    margin-right: 1.5rem;
+  }
+}
+
+@media (max-width: 550px) {
+  #all-tour .col-1 {
+    height: 28rem;
+  }
+
+  #all-tour .col-2 {
+    padding: 1rem 0rem;
+  }
+
+  #all-tour .col-2 .title-tour {
+    font-size: 1.7rem;
+  }
+
+  #all-tour .col-2 .place {
+    margin-bottom: 0.5rem;
+  }
+
+  #all-tour .col-2 .place strong {
+    font-size: 1.2rem;
+  }
+
+  #all-tour .col-2 .place p {
+    font-size: 1.2rem;
+  }
+
+  #all-tour .col-2 .info p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  #all-tour .col-3 {
+    padding: 0.6rem 0rem;
+    justify-content: space-between;
+  }
+
+  #all-tour .col-3 .price {
+    padding: 0.8rem 1rem;
+    margin-bottom: 0;
+  }
+
+  #all-tour .col-3 .price a {
+    line-height: 1.6rem;
+    font-size: 1rem;
+  }
+
+  #all-tour .col-3 .price .money {
+    font-size: 1.2rem;
+  }
+
+  #all-tour .col-3 .time .date {
+    padding: 0.5rem 1rem;
+    margin-bottom: 0rem;
+    font-size: 1rem;
+  }
+
+  #all-tour .col-3 .time .date .icon-container {
+    width: 1.2rem;
+    height: 1.2rem;
+    padding-top: 0.1rem;
+  }
+}
+
+@media (max-width: 350px) {
+  #all-tour .col-2 .title-tour {
+    font-size: 1.35rem;
+  }
+
+  #all-tour .col-3 .time .date {
+    float: none;
+    margin-bottom: 0.3rem;
+  }
+}

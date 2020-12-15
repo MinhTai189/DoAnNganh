@@ -1,0 +1,42 @@
+.btn-scroll {
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  width: 4.5rem;
+  height: 4.5rem;
+  background: var(--priColor);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.btn-scroll:hover {
+  animation: fade infinite 2s;
+}
+
+.btn-scroll.active {
+  display: flex;
+}
+
+.btn-scroll .icon-container {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.btn-scroll .icon-container .icon {
+  fill: #fff;
+}
+
+@keyframes fade {
+  0% {
+    box-shadow: 0 0 0 0px var(--priColor);
+  }
+  70% {
+    box-shadow: 0 0 0 13px #d6493300;
+  }
+  100% {
+    box-shadow: 0 0 0 0px var(--priColor);
+  }
+}

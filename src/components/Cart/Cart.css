@@ -1,0 +1,96 @@
+h1.null {
+  width: 100%;
+  text-align: center;
+  font-size: 3rem;
+  margin: 10rem 0;
+}
+
+#cart .container {
+  padding: 0 1.5rem;
+}
+
+#cart h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 8rem;
+}
+
+#cart .statictis {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1.5rem;
+}
+
+#cart .statictis .total {
+  margin-right: 1.5rem;
+  font-size: 2rem;
+  font-weight: 700;
+  display: flex;
+}
+
+#cart .statictis p {
+  margin-left: 0.5rem;
+  font-weight: 500;
+}
+
+#cart .statictis .btn-pay {
+  background: linear-gradient(
+    to left,
+    var(--priColor) 0%,
+    var(--forColor) 100%
+  );
+  border: 1px solid white;
+  padding: 0.8rem 1.7rem;
+  border-radius: 0.8rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: 0.4s;
+}
+
+#cart .statictis .btn-pay:hover {
+  background: transparent;
+  transition: 0.4s;
+  border: 1px solid var(--thiColor);
+  color: var(--thiColor);
+}
+
+#cart .cart-container {
+  width: 100%;
+}
+
+/* ===========media query============ */
+@media (max-width: 768px) {
+  #cart .statictis {
+    justify-content: flex-start;
+  }
+
+  #cart .statictis .total {
+    flex-basis: 45%;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 575px) {
+  #cart .statictis .total {
+    flex-basis: 100%;
+    font-size: 1.7rem;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 425px) {
+  h1.null {
+    font-size: 2rem;
+  }
+
+  #cart .statictis {
+    padding: 0.2rem 0;
+  }
+}

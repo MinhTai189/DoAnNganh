@@ -1,0 +1,201 @@
+#account {
+  max-width: 30rem;
+  width: 98%;
+  height: 42rem;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  padding: 0.7rem 1.2rem;
+  box-shadow: 0 0 3rem var(--thiColor);
+  z-index: 200;
+  position: absolute;
+  background: #fff;
+  top: -50rem;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.4s ease-out;
+  border-radius: 1rem;
+}
+
+#account.active {
+  top: 10rem;
+  transition: 0.4s ease-out;
+}
+
+#account .account-container {
+  width: 100%;
+}
+
+#account .icon-container {
+  width: 2.2rem;
+  height: 2.2rem;
+  opacity: 0.9;
+  cursor: pointer;
+  transition: 0.3s;
+  margin: 0 0 0.8rem auto;
+  cursor: pointer;
+}
+
+#account .icon-container .icon {
+  fill: var(--priColor);
+  transform: scale(0.9);
+  transition: transform 0.3s;
+}
+
+#account .icon-container:hover .icon {
+  transform: scale(1.1);
+  transition: transform 0.3s;
+}
+
+#account .item-container {
+  width: 100%;
+  height: 10%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  background-color: #d64933cc;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+#account .item-container::after {
+  width: 50%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--priColor);
+  border-radius: 2rem;
+  box-shadow: 0 0 5px var(--thiColor);
+  z-index: 0;
+  transition: 0.8s ease-in;
+}
+
+#account .item-container.signup::after {
+  left: 50%;
+  transition: 0.8s ease-in;
+}
+
+#account .item-container h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  z-index: 2;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  line-height: 40.6px;
+  text-align: center;
+  border-radius: 2rem;
+}
+
+#account .form-container {
+  position: relative;
+  width: 100%;
+  height: 90%;
+  overflow: hidden;
+}
+
+#account .form-container .form-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: 0.8s ease-in-out;
+  opacity: 1;
+}
+
+#account .form-wrapper.signup {
+  transform: translateX(110%);
+  opacity: 0;
+}
+
+#account .signup.active {
+  transform: translateX(0);
+  transition: 0.8s ease-in;
+  opacity: 1;
+}
+
+#account .signin.active {
+  transform: translateX(-110%);
+  transition: 0.8s ease-in;
+  opacity: 0;
+}
+
+#account .form-wrapper h3 {
+  color: red;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  visibility: hidden;
+}
+
+#account .form-wrapper h3.show {
+  visibility: visible;
+}
+
+#account .form-wrapper h3::first-letter {
+  font-size: 1.8rem;
+}
+
+#account .form-wrapper .label {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 3.5rem;
+  margin-top: 2rem;
+}
+
+#account .form-wrapper.signin .label {
+  margin-top: 4rem;
+  margin-bottom: 4.5rem;
+}
+
+#account .form-wrapper.signup .label::after {
+  position: absolute;
+  content: "" attr(data-wrong) "";
+  left: 1.5rem;
+  bottom: -1.05rem;
+  color: #ef0e0e;
+  font-size: 0.95rem;
+  width: 90%;
+  height: 0.7rem;
+}
+
+#account .form-wrapper .label span {
+  position: absolute;
+  left: 2.5rem;
+  top: -0.7rem;
+  font-size: 1.1rem;
+  background: #fff;
+  transition: transform 0.4s;
+  pointer-events: none;
+}
+
+#account .form-wrapper input {
+  width: 90%;
+  outline: none;
+  padding: 0.4rem 1rem;
+  border-radius: 5px;
+  border: 2px solid var(--thiColor);
+}
+
+#account .form-wrapper input:focus {
+  border: 2px solid #148e9e;
+}
+
+#account .form-wrapper .label[data-wrong*=" "] input {
+  border-color: #ef0e0e;
+}
+
+#account .form-wrapper .btn {
+  padding: 0.8rem 1.2rem;
+  border-radius: 0.5rem;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}

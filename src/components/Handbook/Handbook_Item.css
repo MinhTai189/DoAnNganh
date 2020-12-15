@@ -1,0 +1,234 @@
+.handbook-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-origin: left center;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+
+.handbook-container.activeSlide {
+  opacity: 1;
+  visibility: visible;
+  animation: slide-active 1s forwards;
+}
+
+.handbook-container.nextSlide {
+  transform: translateX(100%);
+  opacity: 0;
+  visibility: hidden;
+  animation: slide-next 0.8s forwards ease;
+  animation-delay: 0.2s;
+}
+
+@-webkit-keyframes slide-active {
+  0% {
+    opacity: 1;
+    visibility: visible;
+    transform: rotateZ(0) scale(1);
+  }
+  20% {
+    transform: rotateZ(0) scale(0.95);
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    transform: rotateY(10deg) scale(0.95);
+  }
+}
+
+@keyframes slide-active {
+  0% {
+    opacity: 1;
+    visibility: visible;
+    transform: rotateZ(0) scale(1);
+  }
+  20% {
+    transform: rotateZ(0) scale(0.95);
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    transform: rotateY(10deg) scale(0.95);
+  }
+}
+
+@-webkit-keyframes slide-next {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(100%);
+  }
+  20% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes slide-next {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(100%);
+  }
+  20% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0px);
+  }
+}
+
+.handbook-container .slide-left {
+  flex-basis: 60%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.handbook-container .slide-left h2 {
+  display: block;
+  text-align: center;
+  font-size: 8rem;
+  font-family: var(--thiFont);
+  color: var(--priColor);
+}
+
+.handbook-container .slide-right {
+  flex-basis: 40%;
+  background: var(--secColor);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 2rem;
+}
+
+.handbook-container .slide-right .handbook {
+  margin-bottom: 1.5rem;
+}
+
+.handbook-container .slide-right .handbook a {
+  color: #fff;
+  display: inline-block;
+  padding: 1rem 1.2rem;
+  font-size: 1.3rem;
+  background-image: linear-gradient(
+    to right,
+    #f09819 0%,
+    #edde5d 51%,
+    #f09819 100%
+  );
+  background-size: 200% auto;
+  border-radius: 25px;
+  box-shadow: 0px 0px 5px var(--thiColor);
+  transition: 0.5s;
+}
+
+.handbook-container .slide-right .handbook a:hover {
+  background-position: right center;
+}
+
+/* ==========media query============ */
+@media (max-width: 1100px) {
+  .handbook-container .slide-left h2 {
+    font-size: 6.5rem;
+  }
+
+  .handbook-container .slide-right .handbook {
+    margin-bottom: 1rem;
+  }
+
+  .handbook-container .slide-right .handbook a {
+    font-size: 1.1rem;
+    padding: 0.6rem 1rem;
+  }
+}
+
+@media (max-width: 880px) {
+  .handbook-container {
+    flex-direction: column;
+  }
+
+  .handbook-container .slide-right {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+  }
+
+  .handbook-container .slide-right .handbook {
+    margin-right: 2rem;
+    margin-bottom: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .handbook-container .slide-left h2 {
+    font-size: 5.8rem;
+  }
+
+  .handbook-container .slide-right .handbook {
+    margin-bottom: 1.8rem;
+    margin-right: 1.3rem;
+  }
+
+  .handbook-container .slide-right .handbook a {
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .handbook-container .slide-left {
+    flex-basis: 40%;
+  }
+
+  .handbook-container .slide-left h2 {
+    font-size: 4.5rem;
+  }
+
+  .handbook-container .slide-right {
+    flex-basis: 60%;
+  }
+
+  .handbook-container .slide-right .handbook {
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+  }
+
+  .handbook-container .slide-right {
+    padding: 1rem 1rem;
+  }
+
+  .handbook-container .slide-right .handbook a {
+    font-size: 0.8rem;
+    padding: 0.4rem 1rem;
+  }
+}
+
+@media (max-width: 300px) {
+  .handbook-container .slide-left h2 {
+    font-size: 3rem;
+  }
+
+  .handbook-container .slide-right .handbook {
+    margin-right: 1rem;
+  }
+
+  .handbook-container .slide-right .handbook a {
+    font-size: 0.6rem;
+    padding: 0.4rem 1rem;
+  }
+}
