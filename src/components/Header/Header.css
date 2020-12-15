@@ -261,6 +261,7 @@
     border: none;
     padding: 1.5rem 2rem;
     overflow: scroll;
+    z-index: 1000000;
   }
 
   #header-container .suggestions span {

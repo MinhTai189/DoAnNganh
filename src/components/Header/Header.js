@@ -42,7 +42,6 @@ export default function Header(props) {
   const { Trongnuoc, Ngoainuoc } = props.dataTours;
   let suggestions = [];
 
-
   // ===============Hiển thị tour gợi ý===================
   if (Trongnuoc) {
     const temp = Trongnuoc.reduce((temp, arr) => {

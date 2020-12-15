@@ -27,10 +27,7 @@ export default function Gallery() {
                     <p>Bộ sưu tập những hình ảnh đẹp từ khắp nơi trên thế giới</p>
                     <span><BiPhotoAlbum className="icon"></BiPhotoAlbum></span>
                 </div>
-                <Masonry
-                    columnsCount={3}
-                    gutter={'10px'}
-                >
+                <Masonry columnsCount={3} gutter={10}>
                     {srcImages.map((src, index) => (
                         <img src={src} alt="image" key={index} />
                     ))}
