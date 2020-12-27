@@ -1,7 +1,7 @@
 /* ==========style header========= */
 #header-container {
   width: 100%;
-  max-width: 1800px;
+  margin: auto;
   min-height: calc(100vh - 55.2px);
   background: url(../../images/header.jpg) no-repeat;
   background-size: cover;
