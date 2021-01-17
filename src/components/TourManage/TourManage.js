@@ -244,11 +244,13 @@ export default function TourManage(props) {
 
     // ===============xóa tour================
     const onClickRemoveTour = (id) => {
-        removeData(id);
-        setDataCurrentTours(() => {
-            const temp = dataTable.filter(item => item.id !== id)
-            return temp;
-        })
+        if (window.confirm('Bạn có thật sự muốn xóa dữ liệu không?')) {
+            removeData(id);
+            setDataCurrentTours(() => {
+                const temp = dataTable.filter(item => item.id !== id)
+                return temp;
+            })
+        }
     }
 
     // ==========sắp xếp tour theo nơi khởi hành==========

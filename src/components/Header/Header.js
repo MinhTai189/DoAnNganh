@@ -101,6 +101,7 @@ export default function Header(props) {
       handleSearchTour(searchValue);
   }
 
+
   // ============Đóng/Mở Sugggestion khi dữ liệu nhập thay đổi=========
   const onChangeSuggestion = () => {
     if (!elementInput.current.value)
@@ -158,7 +159,9 @@ export default function Header(props) {
                 </div>
               </div>}
             </div>
-            <button type="submit" onClick={submitSearchTour}><Link to='/tour-finded'>Khám phá &#10142;</Link></button>
+            <button type="submit" onClick={submitSearchTour}>
+              <Link to='/tour-finded'>Khám phá &#10142;</Link>
+            </button>
           </form>
         </div>
       </div>

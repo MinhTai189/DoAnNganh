@@ -17,6 +17,7 @@ export default function Cart_Item(props) {
         handleSeat } = props;
     const [seat, setSeat] = useState(soghe);
 
+    // ==============giảm số lượng ghế đã đặt===============
     const reduceSeat = () => {
         setSeat((oldSeat) => {
             oldState.current = oldSeat;
@@ -27,6 +28,7 @@ export default function Cart_Item(props) {
         }, handleSeat(tour.id, seat - 1, tour.songuoi))
     }
 
+    // ==============tăng số lượng ghế đã đặt===============
     const increaseSeat = () => {
         setSeat((oldSeat) => {
             let seat = oldSeat + 1;

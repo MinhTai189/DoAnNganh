@@ -3,13 +3,11 @@ import './AllTour.css'
 import AllTour_Item from './AllTour_Item';
 
 export default function AllTour(props) {
-    // =====nếu có props thì lấy data là props, không có thì lấy trong Session=======
     const { dataAllTour, handleTourDetail } = props;
-    const data = dataAllTour.length > 0
-        ? dataAllTour
-        : JSON.parse(sessionStorage.getItem('dataAllTour'));
+    const data = dataAllTour;
     const [currentPage, setCurrentPage] = useState(1);
     const [dataCurrentPage, setDataCurrentPage] = useState([]);
+
     const numTourInPage = 5;
     const numPage = Math.ceil(data.length / numTourInPage);
     const arrBtn = new Array(numPage).fill('1');
@@ -19,14 +17,6 @@ export default function AllTour(props) {
             currentPage * numTourInPage);
         setDataCurrentPage(dataTemp);
     }, [currentPage])
-
-    // =========lưu giá trị vào Sessionstorage khi reload lại trang=============
-    useEffect(() => {
-        return (
-            sessionStorage.setItem('dataAllTour', JSON.stringify(data))
-        )
-    }, [])
-
     // =============tăng/giảm trang hiện tại=========
     const increasePage = () => {
         currentPage < numPage && setCurrentPage(currentPage + 1)

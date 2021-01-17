@@ -122,7 +122,7 @@ export default function App() {
       const dateReturn = new Date(formatTime(item.ngayve));
       const now = Date.now();
 
-      if (dateDeparture <= now && dateReturn >= now) {
+      if (dateDeparture <= now) {
         workingTour.push(item);
         keyWorkingTour.push(item.id);
       }
@@ -211,13 +211,17 @@ export default function App() {
   // ============truyền giá trị tìm kiếm tour trong header==========
   const handleSearchTour = (searchValue) => {
     const { Trongnuoc, Ngoainuoc } = dataToursRoot;
-    searchValue = removeAccents(searchValue);
-    const tour = [...Trongnuoc, ...Ngoainuoc].filter(item => {
-      const noiden = removeAccents(item.noiden);
-      const noikhoihanh = removeAccents(item.noikhoihanh);
-      return (noiden.includes(searchValue) || noikhoihanh.includes(searchValue))
-    })
-    setSearchTour([...tour]);
+    if (searchValue !== '') {
+      searchValue = removeAccents(searchValue);
+      const tour = [...Trongnuoc, ...Ngoainuoc].filter(item => {
+        const noiden = removeAccents(item.noiden);
+        const noikhoihanh = removeAccents(item.noikhoihanh);
+        return (noiden.includes(searchValue) || noikhoihanh.includes(searchValue))
+      })
+      setSearchTour([...tour]);
+    }
+    else
+      setSearchTour([]);
   }
 
   // ===========truyền giá trị id của chi tiết tour khi click vào=============
@@ -280,7 +284,7 @@ export default function App() {
     if (userName.length < 6 || userName.length > 15 || !checkUserName(userName))
       errUser = 'Tên tài khoản phải từ 6 đến 15 ký tự và chỉ chứa ký tự, số';
     else if (accounts.some(item => item.taikhoan === userName)) {
-      errUser = 'Tên tài khoản đã tồn tại'
+      errUser = 'Tên tài khoản đã tồn tại';
     }
 
     if (!checkEmail(email))
@@ -402,7 +406,7 @@ export default function App() {
 
   // ==========xử lý xóa tour trong giỏ hàng============
   const handleRemoveCart = (id) => {
-    if (accountSignSuccess.cart !== 0) {
+    if (accountSignSuccess.cart !== 0 && window.confirm("Bạn có thật sự muốn xóa tour đã đặt không?")) {
       const cart = accountSignSuccess.cart.filter(item => item.tour !== id)
 
       cart.length < 1
